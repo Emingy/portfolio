@@ -180,5 +180,14 @@ export const siteConfig: TSiteConfig = {
             tags: ['Open Source', 'npm', 'DX'],
             url: 'https://github.com/Emingy/configs',
         },
+        {
+            id: 'portfolio',
+            title: 'Portfolio',
+            type: EProjectType.Pet,
+            description:
+                'Сайт, который вы сейчас смотрите. Next.js 16 + React 19 + TypeScript, SCSS-модули, next-intl (ru/en), кастомные хуки и анимации.',
+            tags: ['Next.js', 'Pet project', 'Open Source'],
+            url: 'https://github.com/Emingy/portfolio',
+        },
     ],
 };
