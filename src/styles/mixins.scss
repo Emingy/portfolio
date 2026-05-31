@@ -6,14 +6,6 @@
     padding-inline: var(--container-padding);
 }
 
-@mixin hidden-scrollbar {
-    scrollbar-width: none;
-
-    &::-webkit-scrollbar {
-        display: none;
-    }
-}
-
 @mixin font-display {
     font-family: var(--font-display), Oswald, sans-serif;
 }
