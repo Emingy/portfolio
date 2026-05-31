@@ -3,7 +3,7 @@
 import cls from 'classnames/bind';
 import React, { useEffect, useState } from 'react';
 
-import { smoothScrollToY } from '@/components/SmoothScroll';
+import { smoothScrollToY } from '@/utils/smoothScroll';
 
 import styles from './index.module.scss';
 

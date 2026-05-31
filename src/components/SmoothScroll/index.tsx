@@ -2,52 +2,7 @@
 
 import { useEffect } from 'react';
 
-const DURATION = 800;
-
-const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
-
-let rafId: number | null = null;
-
-const cancel = () => {
-    if (rafId !== null) {
-        cancelAnimationFrame(rafId);
-        rafId = null;
-    }
-};
-
-export const smoothScrollToY = (targetY: number) => {
-    cancel();
-
-    const startY = window.scrollY;
-    const distance = targetY - startY;
-    let startTime: number | null = null;
-
-    const step = (ts: number) => {
-        if (startTime === null) startTime = ts;
-
-        const progress = Math.min((ts - startTime) / DURATION, 1);
-
-        window.scrollTo(0, startY + distance * easeOutCubic(progress));
-
-        if (progress < 1) {
-            rafId = requestAnimationFrame(step);
-        } else {
-            rafId = null;
-        }
-    };
-
-    rafId = requestAnimationFrame(step);
-};
-
-const scrollToElement = (target: Element) => {
-    const navbarHeight = parseFloat(
-        getComputedStyle(document.documentElement).getPropertyValue('--navbar-height') || '80'
-    );
-
-    const targetY = target.getBoundingClientRect().top + window.scrollY - navbarHeight;
-
-    smoothScrollToY(targetY);
-};
+import { cancelSmoothScroll, scrollToElement } from '@/utils/smoothScroll';
 
 export const SmoothScroll = () => {
     useEffect(() => {
@@ -69,14 +24,14 @@ export const SmoothScroll = () => {
         };
 
         document.addEventListener('click', handleClick);
-        window.addEventListener('wheel', cancel, { passive: true });
-        window.addEventListener('touchstart', cancel, { passive: true });
+        window.addEventListener('wheel', cancelSmoothScroll, { passive: true });
+        window.addEventListener('touchstart', cancelSmoothScroll, { passive: true });
 
         return () => {
             document.removeEventListener('click', handleClick);
-            window.removeEventListener('wheel', cancel);
-            window.removeEventListener('touchstart', cancel);
-            cancel();
+            window.removeEventListener('wheel', cancelSmoothScroll);
+            window.removeEventListener('touchstart', cancelSmoothScroll);
+            cancelSmoothScroll();
         };
     }, []);
 
