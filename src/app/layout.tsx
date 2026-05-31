@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { JetBrains_Mono, Oswald } from 'next/font/google';
 import React from 'react';
 
@@ -21,6 +21,14 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
     title: 'Александр Потапов — Frontend Developer',
     description: 'Frontend Developer: React, TypeScript, Next.js',
+};
+
+export const viewport: Viewport = {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+    themeColor: '#07070c',
 };
 
 type TProps = Readonly<{
