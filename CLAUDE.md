@@ -22,7 +22,7 @@ pnpm format    # Prettier check
 ## intl
 
 Маршрутизация: `src/app/[locale]/` — все страницы под `/ru/…` и `/en/…`.
-`src/proxy.ts` (Next.js 16 middleware) определяет локаль по `Accept-Language` и редиректит с `/`.
+`src/middleware.ts` (Edge middleware) определяет локаль по `Accept-Language` и редиректит с `/`.
 
 ```
 src/intl/
@@ -100,7 +100,7 @@ src/
     routing.ts          # defineRouting + asLocale()
     request.ts          # getRequestConfig
     navigation.ts       # createNavigation
-  proxy.ts              # next-intl middleware (Next.js 16: proxy, не middleware)
+  middleware.ts         # next-intl Edge middleware — locale detection + redirect
   components/           # один каталог на компонент
   content/
     site.ts             # getSiteConfig(locale) — точка входа
