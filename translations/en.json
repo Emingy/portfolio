@@ -40,7 +40,9 @@
         "open": "Open ↗",
         "close": "Close",
         "iframe-title": "Preview {title}",
-        "footer-hint": "// If the preview didn't load — the site blocks embedding. Open in a new tab."
+        "footer-hint": "// If the preview didn't load — the site blocks embedding. Open in a new tab.",
+        "checking": "Checking…",
+        "blocked-hint": "Site does not support embedding"
     },
     "project-card": {
         "open-preview": "Open preview {title}",

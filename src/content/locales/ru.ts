@@ -142,7 +142,7 @@ export const siteConfig: TSiteConfig = {
             title: 'OneTwoTrip Bus',
             type: EProjectType.Commercial,
             description: 'Сервис поиска и покупки билетов на междугородние автобусы.',
-            tags: ['Travel', 'B2C', 'Marketplace'],
+            tags: ['B2C', 'Travel', 'Marketplace'],
             url: 'https://www.onetwotrip.com/ru/bus/',
         },
         {
@@ -186,7 +186,7 @@ export const siteConfig: TSiteConfig = {
             type: EProjectType.Pet,
             description:
                 'Сайт, который вы сейчас смотрите. Next.js 16 + React 19 + TypeScript, SCSS-модули, next-intl (ru/en), кастомные хуки и анимации.',
-            tags: ['Next.js', 'Pet project', 'Open Source'],
+            tags: ['Open Source', 'Next.js', 'Intl'],
             url: 'https://github.com/Emingy/portfolio',
         },
     ],
