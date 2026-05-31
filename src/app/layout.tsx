@@ -21,6 +21,10 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
     title: 'Александр Потапов — Frontend Developer',
     description: 'Frontend Developer: React, TypeScript, Next.js',
+    icons: {
+        icon: '/favicon.ico',
+        apple: '/apple-touch-icon.png',
+    },
 };
 
 export const viewport: Viewport = {
