@@ -1,0 +1,16 @@
+.ScrollProgress {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: calc(var(--z-navbar) + 1);
+
+    width: 100%;
+    height: 2px;
+
+    background: linear-gradient(to right, var(--color-cyan), var(--color-magenta));
+    box-shadow: 0 0 8px var(--color-cyan);
+
+    transform: scaleX(0);
+    transform-origin: left;
+}

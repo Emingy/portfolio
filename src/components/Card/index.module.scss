@@ -1,0 +1,17 @@
+.Card {
+    padding: 24px;
+
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-l);
+
+    transition:
+        transform var(--transition-default),
+        border-color var(--transition-default);
+
+    &:hover {
+        border-color: var(--color-cyan);
+
+        transform: translateY(-4px);
+    }
+}

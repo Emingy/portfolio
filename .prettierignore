@@ -1,0 +1,8 @@
+node_modules
+.husky
+plop-templates
+lib
+coverage
+storybook-static
+*.hbs
+.next

@@ -1,0 +1,118 @@
+@keyframes brand-in {
+    from {
+        opacity: 0;
+        letter-spacing: 0.6em;
+    }
+
+    to {
+        opacity: 1;
+        letter-spacing: 0.32em;
+    }
+}
+
+@keyframes bar-fill {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes role-in {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.Intro {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    z-index: 99999;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    background: var(--color-bg-deep);
+
+    transition: opacity 0.8s ease;
+
+    &_hiding {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &__scanlines {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        background: repeating-linear-gradient(
+            to bottom,
+            transparent 0 2px,
+            rgb(0 0 0 / 18%) 2px 4px
+        );
+        opacity: 0.3;
+
+        pointer-events: none;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    &__brand {
+        @include font-display;
+        font-size: clamp(1.8rem, 6vw, 3.2rem);
+
+        font-weight: 700;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+
+        color: var(--color-text-bright);
+
+        animation: brand-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    &__role {
+        opacity: 0;
+        font-size: 0.7rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+
+        color: var(--color-cyan);
+        animation: role-in 0.6s ease 0.8s forwards;
+    }
+
+    &__bar {
+        width: 160px;
+        height: 1px;
+
+        background: linear-gradient(to right, var(--color-cyan), var(--color-magenta));
+        box-shadow: 0 0 8px var(--color-cyan);
+
+        animation: bar-fill 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+}

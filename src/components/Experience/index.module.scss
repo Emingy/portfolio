@@ -1,0 +1,23 @@
+.Experience {
+    position: relative;
+
+    display: grid;
+    gap: 48px;
+
+    max-width: 780px;
+
+    padding-left: 42px;
+
+    &::before {
+        position: absolute;
+        top: 8px;
+        bottom: 8px;
+        left: 9px;
+
+        width: 2px;
+
+        background: linear-gradient(var(--color-cyan), var(--color-magenta));
+        box-shadow: 0 0 12px rgb(31 224 232 / 45%);
+        content: '';
+    }
+}

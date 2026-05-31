@@ -1,0 +1,49 @@
+:root {
+    /* Layout */
+
+    --container-width: 1180px;
+    --container-padding: 28px;
+
+    /* Colors — background */
+
+    --color-bg: #07070c;
+    --color-bg-deep: #040407;
+    --color-bg-panel: #0d0d15;
+
+    /* Colors — text */
+
+    --color-text: #cfcfdd;
+    --color-text-bright: #f3f3fb;
+    --color-text-muted: #8a8a9e;
+
+    /* Colors — accent */
+
+    --color-cyan: #1fe0e8;
+    --color-cyan-soft: #7af5fa;
+    --color-magenta: #ff2e7e;
+    --color-magenta-soft: #ff6aa6;
+    --color-amber: #ffb43d;
+
+    /* Colors — border */
+
+    --color-border: rgb(120 120 160 / 14%);
+
+    /* Transition */
+
+    --transition-fast: 0.2s ease;
+    --transition-default: 0.3s ease;
+
+    /* Navbar */
+
+    --navbar-height: 80px;
+
+    /* Z-index */
+
+    --z-rain: 1;
+    --z-content: 10;
+    --z-navbar: 1000;
+    --z-vignette: 8800;
+    --z-scanlines: 8900;
+    --z-grain: 9000;
+    --z-modal: 9500;
+}

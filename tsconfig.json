@@ -1,0 +1,10 @@
+{
+    "extends": "@emingy/configs/tsconfig",
+    "compilerOptions": {
+        "paths": {
+            "@/*": ["src/*"]
+        },
+        "baseUrl": "."
+    },
+    "exclude": ["node_modules", ".next", ".husky"]
+}

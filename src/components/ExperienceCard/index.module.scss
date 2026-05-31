@@ -1,0 +1,85 @@
+.ExperienceCard {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        top: 5px;
+        left: -38px;
+
+        width: 14px;
+        height: 14px;
+
+        background: var(--color-bg);
+
+        border: 2px solid var(--color-cyan);
+        border-radius: 50%;
+        box-shadow: 0 0 12px var(--color-cyan);
+
+        transition:
+            background var(--transition-default),
+            box-shadow var(--transition-default);
+        content: '';
+    }
+
+    &:hover::before {
+        background: var(--color-cyan);
+        box-shadow: 0 0 18px var(--color-cyan);
+    }
+
+    &__period {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        margin-bottom: 8px;
+
+        font-size: 0.64rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+
+        color: var(--color-magenta);
+    }
+
+    &__duration {
+        letter-spacing: 0.12em;
+        color: var(--color-text-muted);
+    }
+
+    &__role {
+        @include font-display;
+        font-size: 1.2rem;
+
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+
+        color: var(--color-text-bright);
+    }
+
+    &__company {
+        margin: 3px 0 11px;
+
+        font-size: 0.82rem;
+
+        color: var(--color-cyan-soft);
+    }
+
+    &__company-link {
+        border-bottom: 1px solid currentcolor;
+
+        transition: opacity var(--transition-fast);
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__description {
+        max-width: 620px;
+
+        font-size: 0.84rem;
+        line-height: 1.7;
+
+        color: var(--color-text-muted);
+    }
+}

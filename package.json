@@ -1,0 +1,59 @@
+{
+    "name": "portfolio",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "prepare": "husky",
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "lint:scss": "stylelint \"**/*.scss\" --ignore-path .gitignore",
+        "lint:scss-fix": "stylelint \"**/*.scss\" --ignore-path .gitignore --fix",
+        "format": "prettier . --check",
+        "format:fix": "prettier . --write",
+        "test": "vitest --passWithNoTests",
+        "precommit": "pnpm test && pnpm lint && pnpm lint:scss && pnpm format"
+    },
+    "dependencies": {
+        "@emingy/configs": "^0.3.0",
+        "classnames": "2.5.1",
+        "next": "16.2.6",
+        "react": "19.2.4",
+        "react-dom": "19.2.4"
+    },
+    "lint-staged": {
+        "*.{ts,tsx,js,jsx}": [
+            "eslint --fix",
+            "prettier --write"
+        ],
+        "*.{json,md}": [
+            "prettier --write"
+        ],
+        "*.{scss,css}": [
+            "stylelint --fix"
+        ]
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "6.9.1",
+        "@testing-library/react": "16.3.2",
+        "@types/classnames": "2.3.4",
+        "@types/node": "^20",
+        "@types/react": "^19",
+        "@types/react-dom": "^19",
+        "eslint": "^9",
+        "eslint-config-next": "16.2.6",
+        "husky": "9.1.7",
+        "jsdom": "29.1.1",
+        "lint-staged": "17.0.6",
+        "playwright": "1.60.0",
+        "sass": "1.100.0",
+        "typescript": "^5",
+        "vitest": "4.1.7"
+    },
+    "engines": {
+        "node": ">=22",
+        "pnpm": "10"
+    }
+}

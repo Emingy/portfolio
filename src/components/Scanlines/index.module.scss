@@ -1,0 +1,14 @@
+.Scanlines {
+    position: fixed;
+    inset: 0;
+
+    z-index: var(--z-scanlines);
+
+    background: repeating-linear-gradient(to bottom, transparent 0 2px, rgb(0 0 0 / 18%) 2px 4px);
+
+    opacity: 0.4;
+
+    pointer-events: none;
+
+    mix-blend-mode: multiply;
+}

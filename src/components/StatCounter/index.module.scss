@@ -1,0 +1,23 @@
+.StatCounter {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    &__value {
+        @include font-display;
+        font-size: clamp(1.4rem, 3vw, 2rem);
+
+        font-weight: 600;
+        letter-spacing: 0.06em;
+
+        color: var(--color-text-bright);
+    }
+
+    &__label {
+        font-size: 0.62rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+
+        color: var(--color-text-muted);
+    }
+}

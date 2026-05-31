@@ -1,0 +1,82 @@
+.Contact {
+    text-align: center;
+
+    &__lead {
+        @include font-display;
+
+        margin-bottom: 14px;
+        font-size: clamp(1.6rem, 5vw, 3.2rem);
+
+        font-weight: 300;
+        line-height: 1.2;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+
+        color: var(--color-text-bright);
+
+        b {
+            font-weight: 600;
+            color: var(--color-magenta);
+        }
+    }
+
+    &__sub {
+        margin-bottom: 40px;
+
+        font-size: 0.85rem;
+
+        color: var(--color-text-muted);
+    }
+
+    &__cv {
+        padding: 14px 24px;
+        border: 1px solid rgb(255 46 126 / 45%);
+
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+
+        color: var(--color-magenta);
+
+        transition:
+            border-color var(--transition-default),
+            color var(--transition-default),
+            box-shadow var(--transition-default),
+            background var(--transition-default);
+
+        &:hover {
+            background: var(--color-magenta);
+            box-shadow: 0 0 16px rgb(255 46 126 / 30%);
+            color: var(--color-bg-deep);
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+
+        a {
+            padding: 14px 24px;
+            border: 1px solid var(--color-border);
+
+            font-size: 0.72rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+
+            color: var(--color-text);
+
+            transition:
+                border-color var(--transition-default),
+                color var(--transition-default),
+                box-shadow var(--transition-default);
+
+            &:hover {
+                border-color: var(--color-cyan);
+                box-shadow: 0 0 16px rgb(31 224 232 / 20%);
+                color: var(--color-cyan);
+            }
+        }
+    }
+}

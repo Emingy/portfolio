@@ -1,0 +1,19 @@
+@mixin container {
+    width: 100%;
+    max-width: var(--container-width);
+
+    margin-inline: auto;
+    padding-inline: var(--container-padding);
+}
+
+@mixin hidden-scrollbar {
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@mixin font-display {
+    font-family: var(--font-display), Oswald, sans-serif;
+}

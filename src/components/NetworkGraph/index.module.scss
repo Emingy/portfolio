@@ -1,0 +1,8 @@
+.NetworkGraph {
+    position: fixed;
+    inset: 0;
+
+    z-index: var(--z-rain);
+
+    pointer-events: none;
+}

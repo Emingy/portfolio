@@ -1,0 +1,13 @@
+.Vignette {
+    position: fixed;
+    inset: 0;
+
+    z-index: var(--z-vignette);
+
+    background:
+        radial-gradient(ellipse at center, transparent 40%, rgb(0 0 0 / 55%) 100%),
+        radial-gradient(circle at 80% 10%, rgb(255 46 126 / 6%), transparent 45%),
+        radial-gradient(circle at 10% 90%, rgb(31 224 232 / 6%), transparent 45%);
+
+    pointer-events: none;
+}

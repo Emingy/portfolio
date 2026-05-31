@@ -1,0 +1,15 @@
+.Reveal {
+    opacity: 0;
+
+    transition:
+        opacity 0.9s,
+        transform 0.9s;
+
+    transform: translateY(26px);
+
+    &__visible {
+        opacity: 1;
+
+        transform: none;
+    }
+}

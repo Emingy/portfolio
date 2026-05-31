@@ -1,0 +1,11 @@
+node_modules
+bin
+obj
+*.*
+!*.css
+!*.scss
+lib
+coverage
+storybook-static
+.next
+.husky
