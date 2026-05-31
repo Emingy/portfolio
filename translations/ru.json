@@ -1,0 +1,55 @@
+{
+    "nav": {
+        "about": "Обо мне",
+        "skills": "Стек",
+        "projects": "Проекты",
+        "experience": "Опыт",
+        "contacts": "Контакты"
+    },
+    "hero": {
+        "prefix": "Создаю",
+        "cta-projects": "Смотреть проекты",
+        "cta-contact": "Связаться"
+    },
+    "about": {
+        "section-title": "Обо мне",
+        "hobbies-label": "вне работы",
+        "dossier-name": "ИМЯ",
+        "dossier-role": "РОЛЬ",
+        "dossier-exp": "ОПЫТ",
+        "dossier-city": "ГОРОД",
+        "stat-years-suffix": " лет",
+        "stat-exp": "опыт",
+        "stat-companies": "компании",
+        "stat-projects": "проектов"
+    },
+    "skills": {
+        "section-title": "Стек"
+    },
+    "experience": {
+        "section-title": "Опыт работы"
+    },
+    "contact": {
+        "section-title": "Контакты",
+        "download-cv": "Скачать резюме ↓"
+    },
+    "footer": {
+        "role": "Frontend Developer"
+    },
+    "project-modal": {
+        "open": "Открыть ↗",
+        "close": "Закрыть",
+        "iframe-title": "Превью {title}",
+        "footer-hint": "// Если превью не загрузилось — сайт запрещает встраивание. Откройте в новой вкладке."
+    },
+    "project-card": {
+        "open-preview": "Открыть превью {title}",
+        "badge-commercial": "Коммерческий",
+        "badge-pet": "Пет-проект"
+    },
+    "common": {
+        "close-menu": "Закрыть меню",
+        "open-menu": "Открыть меню",
+        "lang-switch": "EN"
+    }
+}

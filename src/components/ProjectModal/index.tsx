@@ -1,6 +1,7 @@
 'use client';
 
 import cls from 'classnames/bind';
+import { useTranslations } from 'next-intl';
 import React, { useEffect } from 'react';
 
 import styles from './index.module.scss';
@@ -11,6 +12,7 @@ const BLOCK_NAME = 'ProjectModal';
 const cn = cls.bind(styles);
 
 export const ProjectModal = ({ project, onClose }: TProps) => {
+    const t = useTranslations('project-modal');
     const isOpen = project !== null;
 
     useEffect(() => {
@@ -61,14 +63,14 @@ export const ProjectModal = ({ project, onClose }: TProps) => {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Открыть ↗
+                            {t('open')}
                         </a>
                     )}
 
                     <button
                         className={cn(`${BLOCK_NAME}__close`)}
                         onClick={onClose}
-                        aria-label="Закрыть"
+                        aria-label={t('close')}
                     >
                         ×
                     </button>
@@ -78,17 +80,14 @@ export const ProjectModal = ({ project, onClose }: TProps) => {
                     {project.url && (
                         <iframe
                             src={project.url}
-                            title={`Превью ${project.title}`}
+                            title={t('iframe-title', { title: project.title })}
                             loading="lazy"
                             sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
                         />
                     )}
                 </div>
 
-                <div className={cn(`${BLOCK_NAME}__foot`)}>
-                    // Если превью не загрузилось — сайт запрещает встраивание. Откройте в новой
-                    вкладке.
-                </div>
+                <div className={cn(`${BLOCK_NAME}__foot`)}>{t('footer-hint')}</div>
             </div>
         </div>
     );

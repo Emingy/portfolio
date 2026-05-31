@@ -79,6 +79,26 @@
         }
     }
 
+    &__actions {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__lang {
+        font-size: 0.62rem;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+
+        color: var(--color-text-muted);
+
+        transition: color var(--transition-fast);
+
+        &:hover {
+            color: var(--color-cyan);
+        }
+    }
+
     &__burger {
         display: none;
 

@@ -1,25 +1,29 @@
 import cls from 'classnames/bind';
+import { getLocale, getTranslations } from 'next-intl/server';
 import React from 'react';
 
 import { Reveal } from '@/components/Reveal';
 import { Section } from '@/components/Section';
-import { siteConfig } from '@/content/site';
+import { getSiteConfig } from '@/content/site';
+import { asLocale } from '@/intl/routing';
 
 import styles from './index.module.scss';
 
 const BLOCK_NAME = 'Skills';
 const cn = cls.bind(styles);
 
-export const Skills = () => {
-    const grouped = siteConfig.skills.reduce<Record<string, string[]>>(
-        (acc, { category, title }) => {
-            (acc[category] ??= []).push(title);
-            return acc;
-        },
-        {}
-    );
+export const Skills = async () => {
+    const locale = asLocale(await getLocale());
+    const t = await getTranslations('skills');
+    const { skills } = getSiteConfig(locale);
+
+    const grouped = skills.reduce<Record<string, string[]>>((acc, { category, title }) => {
+        (acc[category] ??= []).push(title);
+        return acc;
+    }, {});
+
     return (
-        <Section id="skills" num="02" title="Стек">
+        <Section id="skills" num="02" title={t('section-title')}>
             <div className={cn(BLOCK_NAME)}>
                 {Object.entries(grouped).map(([category, titles], i) => (
                     <Reveal key={category} delay={i * 60}>

@@ -1,0 +1,55 @@
+{
+    "nav": {
+        "about": "About",
+        "skills": "Stack",
+        "projects": "Projects",
+        "experience": "Experience",
+        "contacts": "Contacts"
+    },
+    "hero": {
+        "prefix": "I build",
+        "cta-projects": "View projects",
+        "cta-contact": "Contact me"
+    },
+    "about": {
+        "section-title": "About",
+        "hobbies-label": "outside work",
+        "dossier-name": "NAME",
+        "dossier-role": "ROLE",
+        "dossier-exp": "EXP",
+        "dossier-city": "CITY",
+        "stat-years-suffix": " yr",
+        "stat-exp": "experience",
+        "stat-companies": "companies",
+        "stat-projects": "projects"
+    },
+    "skills": {
+        "section-title": "Stack"
+    },
+    "experience": {
+        "section-title": "Experience"
+    },
+    "contact": {
+        "section-title": "Contacts",
+        "download-cv": "Download CV ↓"
+    },
+    "footer": {
+        "role": "Frontend Developer"
+    },
+    "project-modal": {
+        "open": "Open ↗",
+        "close": "Close",
+        "iframe-title": "Preview {title}",
+        "footer-hint": "// If the preview didn't load — the site blocks embedding. Open in a new tab."
+    },
+    "project-card": {
+        "open-preview": "Open preview {title}",
+        "badge-commercial": "Commercial",
+        "badge-pet": "Pet project"
+    },
+    "common": {
+        "close-menu": "Close menu",
+        "open-menu": "Open menu",
+        "lang-switch": "RU"
+    }
+}

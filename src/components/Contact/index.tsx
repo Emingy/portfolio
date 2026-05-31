@@ -1,20 +1,24 @@
 import cls from 'classnames/bind';
+import { getLocale, getTranslations } from 'next-intl/server';
 import React from 'react';
 
 import { Reveal } from '@/components/Reveal';
 import { Section } from '@/components/Section';
-import { siteConfig } from '@/content/site';
+import { getSiteConfig } from '@/content/site';
+import { asLocale } from '@/intl/routing';
 
 import styles from './index.module.scss';
 
 const BLOCK_NAME = 'Contact';
 const cn = cls.bind(styles);
 
-export const Contact = () => {
-    const { contacts } = siteConfig;
+export const Contact = async () => {
+    const locale = asLocale(await getLocale());
+    const t = await getTranslations('contact');
+    const { contacts } = getSiteConfig(locale);
 
     return (
-        <Section id="contacts" num="05" title="Контакты">
+        <Section id="contacts" num="05" title={t('section-title')}>
             <Reveal>
                 <div className={cn(BLOCK_NAME)}>
                     <p className={cn(`${BLOCK_NAME}__lead`)}>{contacts.lead}</p>
@@ -33,7 +37,7 @@ export const Contact = () => {
 
                         {contacts.cvUrl && (
                             <a href={contacts.cvUrl} download className={cn(`${BLOCK_NAME}__cv`)}>
-                                Скачать резюме ↓
+                                {t('download-cv')}
                             </a>
                         )}
                     </div>

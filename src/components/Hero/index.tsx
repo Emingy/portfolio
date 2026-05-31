@@ -1,10 +1,12 @@
 'use client';
 
 import cls from 'classnames/bind';
+import { useLocale, useTranslations } from 'next-intl';
 import React from 'react';
 
-import { siteConfig } from '@/content/site';
+import { getSiteConfig } from '@/content/site';
 import { useTyping } from '@/hooks/useTyping';
+import { asLocale } from '@/intl/routing';
 
 import styles from './index.module.scss';
 
@@ -12,12 +14,15 @@ const BLOCK_NAME = 'Hero';
 const cn = cls.bind(styles);
 
 export const Hero = () => {
-    const typedText = useTyping(siteConfig.personal.heroPhrases);
+    const locale = asLocale(useLocale());
+    const t = useTranslations('hero');
+    const { personal } = getSiteConfig(locale);
+    const typedText = useTyping(personal.heroPhrases);
 
     return (
         <header id="hero" className={cn(BLOCK_NAME)}>
             <div className={cn(`${BLOCK_NAME}__wrap`)}>
-                <div className={cn(`${BLOCK_NAME}__case-tag`)}>{siteConfig.personal.name}</div>
+                <div className={cn(`${BLOCK_NAME}__case-tag`)}>{personal.name}</div>
 
                 <h1 className={cn(`${BLOCK_NAME}__title`)}>
                     Frontend
@@ -26,7 +31,7 @@ export const Hero = () => {
                 </h1>
 
                 <p className={cn(`${BLOCK_NAME}__role`)}>
-                    Создаю{' '}
+                    {t('prefix')}{' '}
                     <span className={cn(`${BLOCK_NAME}__typed`)}>
                         {typedText}
                         <span className={cn(`${BLOCK_NAME}__cursor`)}>|</span>
@@ -35,14 +40,14 @@ export const Hero = () => {
 
                 <div className={cn(`${BLOCK_NAME}__cta`)}>
                     <a href="#projects" className={cn(`${BLOCK_NAME}__btn`)}>
-                        Смотреть проекты
+                        {t('cta-projects')}
                     </a>
 
                     <a
                         href="#contacts"
                         className={cn(`${BLOCK_NAME}__btn`, `${BLOCK_NAME}__btn_alt`)}
                     >
-                        Связаться
+                        {t('cta-contact')}
                     </a>
                 </div>
             </div>

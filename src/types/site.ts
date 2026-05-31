@@ -8,7 +8,6 @@ export type TSiteConfig = {
         heroPhrases: string[];
         hobbies: string[];
         about: {
-            title: string;
             paragraphs: string[];
         };
     };

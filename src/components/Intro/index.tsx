@@ -1,9 +1,11 @@
 'use client';
 
 import cls from 'classnames/bind';
+import { useLocale } from 'next-intl';
 import React, { useEffect, useState } from 'react';
 
-import { siteConfig } from '@/content/site';
+import { getSiteConfig } from '@/content/site';
+import { asLocale } from '@/intl/routing';
 
 import styles from './index.module.scss';
 
@@ -13,6 +15,8 @@ const BLOCK_NAME = 'Intro';
 const cn = cls.bind(styles);
 
 export const Intro = () => {
+    const locale = asLocale(useLocale());
+    const { personal } = getSiteConfig(locale);
     const [phase, setPhase] = useState<EStates>(EStates.Visible);
 
     useEffect(() => {
@@ -38,9 +42,8 @@ export const Intro = () => {
             <div className={cn(`${BLOCK_NAME}__scanlines`)} aria-hidden="true" />
 
             <div className={cn(`${BLOCK_NAME}__content`)}>
-                <span className={cn(`${BLOCK_NAME}__brand`)}>{siteConfig.personal.brand}</span>
-
-                <span className={cn(`${BLOCK_NAME}__role`)}>{siteConfig.personal.position}</span>
+                <span className={cn(`${BLOCK_NAME}__brand`)}>{personal.brand}</span>
+                <span className={cn(`${BLOCK_NAME}__role`)}>{personal.position}</span>
             </div>
 
             <div className={cn(`${BLOCK_NAME}__bar`)} aria-hidden="true" />

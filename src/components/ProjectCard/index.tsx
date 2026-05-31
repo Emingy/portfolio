@@ -1,17 +1,20 @@
+'use client';
+
 import cls from 'classnames/bind';
+import { useTranslations } from 'next-intl';
 import React from 'react';
 
 import { EProjectType } from '@/constants';
 
 import styles from './index.module.scss';
 
-import { BADGE_LABEL } from './constants';
 import type { TProps } from './types';
 
 const BLOCK_NAME = 'ProjectCard';
 const cn = cls.bind(styles);
 
 export const ProjectCard = ({ project, index, onOpen }: TProps) => {
+    const t = useTranslations('project-card');
     const num = String(index + 1).padStart(2, '0');
     const hasPreview = Boolean(project.url);
 
@@ -27,12 +30,15 @@ export const ProjectCard = ({ project, index, onOpen }: TProps) => {
         }
     };
 
+    const badgeLabel =
+        project.type === EProjectType.Commercial ? t('badge-commercial') : t('badge-pet');
+
     return (
         <article
             className={cn(BLOCK_NAME, { [`${BLOCK_NAME}_locked`]: !hasPreview })}
             role={hasPreview ? 'button' : undefined}
             tabIndex={hasPreview ? 0 : undefined}
-            aria-label={hasPreview ? `Открыть превью ${project.title}` : undefined}
+            aria-label={hasPreview ? t('open-preview', { title: project.title }) : undefined}
             onClick={handleClick}
             onKeyDown={handleKeyDown}
         >
@@ -49,7 +55,7 @@ export const ProjectCard = ({ project, index, onOpen }: TProps) => {
                             [`${BLOCK_NAME}__badge_pet`]: project.type === EProjectType.Pet,
                         })}
                     >
-                        {BADGE_LABEL[project.type]}
+                        {badgeLabel}
                     </span>
                 </div>
 
