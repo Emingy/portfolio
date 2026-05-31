@@ -14,7 +14,7 @@
         "format": "prettier . --check",
         "format:fix": "prettier . --write",
         "test": "vitest --passWithNoTests",
-        "precommit": "pnpm test && pnpm lint && pnpm lint:scss && pnpm format",
+        "precommit": "pnpm test&& pnpx lint-staged && pnpm lint && pnpm lint:scss && pnpm format",
         "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
         "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
         "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
