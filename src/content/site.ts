@@ -1,7 +1,7 @@
 import { EProjectType } from '@/constants';
 import type { TSiteConfig } from '@/types/site';
 
-export const siteConfig = {
+export const siteConfig: TSiteConfig = {
     personal: {
         name: 'Александр Потапов',
 
@@ -10,6 +10,8 @@ export const siteConfig = {
         position: 'Frontend Developer',
 
         city: 'Москва',
+
+        avatar: undefined,
 
         heroPhrases: [
             'масштабируемые интерфейсы на React.',
@@ -250,4 +252,4 @@ export const siteConfig = {
             url: 'https://github.com/Emingy/configs',
         },
     ],
-} satisfies TSiteConfig;
+};

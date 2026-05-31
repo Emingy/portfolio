@@ -56,29 +56,42 @@ export const About = () => {
                 </div>
 
                 <div className={cn(`${BLOCK_NAME}__side`)}>
-                    <Reveal>
-                        <div className={cn(`${BLOCK_NAME}__portrait`)}>
-                            <div className={cn(`${BLOCK_NAME}__portrait-ph`)}>
-                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                    <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-5 0-9 2.5-9 6v2h18v-2c0-3.5-4-6-9-6Z" />
-                                </svg>
-                                <span>Фото</span>
-                            </div>
+                    {personal.avatar && (
+                        <Reveal>
+                            <div className={cn(`${BLOCK_NAME}__portrait`)}>
+                                <img
+                                    src={personal.avatar}
+                                    alt={personal.name}
+                                    className={cn(`${BLOCK_NAME}__portrait-img`)}
+                                />
 
-                            <i
-                                className={cn(`${BLOCK_NAME}__corner`, `${BLOCK_NAME}__corner_tl`)}
-                            />
-                            <i
-                                className={cn(`${BLOCK_NAME}__corner`, `${BLOCK_NAME}__corner_tr`)}
-                            />
-                            <i
-                                className={cn(`${BLOCK_NAME}__corner`, `${BLOCK_NAME}__corner_bl`)}
-                            />
-                            <i
-                                className={cn(`${BLOCK_NAME}__corner`, `${BLOCK_NAME}__corner_br`)}
-                            />
-                        </div>
-                    </Reveal>
+                                <i
+                                    className={cn(
+                                        `${BLOCK_NAME}__corner`,
+                                        `${BLOCK_NAME}__corner_tl`
+                                    )}
+                                />
+                                <i
+                                    className={cn(
+                                        `${BLOCK_NAME}__corner`,
+                                        `${BLOCK_NAME}__corner_tr`
+                                    )}
+                                />
+                                <i
+                                    className={cn(
+                                        `${BLOCK_NAME}__corner`,
+                                        `${BLOCK_NAME}__corner_bl`
+                                    )}
+                                />
+                                <i
+                                    className={cn(
+                                        `${BLOCK_NAME}__corner`,
+                                        `${BLOCK_NAME}__corner_br`
+                                    )}
+                                />
+                            </div>
+                        </Reveal>
+                    )}
 
                     <Reveal delay={100}>
                         <div className={cn(`${BLOCK_NAME}__dossier`)}>
