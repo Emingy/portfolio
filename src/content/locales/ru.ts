@@ -78,7 +78,7 @@ export const siteConfig: TSiteConfig = {
             company: 'Wildberries',
             companyUrl: 'https://rwb.ru/',
             role: 'Senior frontend developer',
-            startDate: '2023-08',
+            startDate: '2025-10',
             location: 'Москва',
             description:
                 'Разрабатываю платформу поставщиков на микрофронтенд-архитектуре (Module Federation). Создал инструмент автогенерации testid-манифеста для e2e-тестов, веду технические инициативы по качеству кодовой базы.',
