@@ -180,6 +180,15 @@ export const siteConfig: TSiteConfig = {
             url: 'https://github.com/Emingy/configs',
         },
         {
+            id: 'talpa',
+            title: 'Talpa',
+            type: EProjectType.Pet,
+            description:
+                'System tray app written in Rust that routes traffic for specific domains and IPs through an SSH tunnel. Supports SOCKS5, wildcard domains, CIDR ranges, and auto-restart.',
+            tags: ['Open Source', 'Rust', 'Network'],
+            url: 'https://github.com/Emingy/talpa',
+        },
+        {
             id: 'portfolio',
             title: 'Portfolio',
             type: EProjectType.Pet,

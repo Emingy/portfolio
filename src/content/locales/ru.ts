@@ -181,6 +181,15 @@ export const siteConfig: TSiteConfig = {
             url: 'https://github.com/Emingy/configs',
         },
         {
+            id: 'talpa',
+            title: 'Talpa',
+            type: EProjectType.Pet,
+            description:
+                'Приложение на Rust в системном трее: маршрутизирует трафик выбранных доменов и IP через SSH-туннель. Поддерживает SOCKS5, wildcard-домены, CIDR-диапазоны и автоперезапуск туннеля.',
+            tags: ['Open Source', 'Rust', 'Network'],
+            url: 'https://github.com/Emingy/talpa',
+        },
+        {
             id: 'portfolio',
             title: 'Portfolio',
             type: EProjectType.Pet,
