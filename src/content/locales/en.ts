@@ -184,7 +184,7 @@ export const siteConfig: TSiteConfig = {
             title: 'Talpa',
             type: EProjectType.Pet,
             description:
-                'System tray app written in Rust that routes traffic for specific domains and IPs through an SSH tunnel. Supports SOCKS5, wildcard domains, CIDR ranges, and auto-restart.',
+                'System tray app written in Rust that routes traffic for selected domains and subnets through an SSH SOCKS5 tunnel via a userspace TUN device, without touching system proxy settings. Surgical split-DNS, per-IP routes that win over a VPN, wildcard domains, CIDR. Cross-platform: macOS / Linux / Windows.',
             tags: ['Open Source', 'Rust', 'Network'],
             url: 'https://github.com/Emingy/talpa',
         },

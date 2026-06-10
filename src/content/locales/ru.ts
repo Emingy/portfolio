@@ -185,7 +185,7 @@ export const siteConfig: TSiteConfig = {
             title: 'Talpa',
             type: EProjectType.Pet,
             description:
-                'Приложение на Rust в системном трее: маршрутизирует трафик выбранных доменов и IP через SSH-туннель. Поддерживает SOCKS5, wildcard-домены, CIDR-диапазоны и автоперезапуск туннеля.',
+                'Приложение на Rust в системном трее: заворачивает трафик выбранных доменов и подсетей через SSH SOCKS5-туннель с помощью userspace TUN-устройства, не трогая системные настройки прокси. Хирургический split-DNS, маршруты per-IP поверх VPN, wildcard-домены, CIDR. Кроссплатформенность: macOS / Linux / Windows.',
             tags: ['Open Source', 'Rust', 'Network'],
             url: 'https://github.com/Emingy/talpa',
         },
